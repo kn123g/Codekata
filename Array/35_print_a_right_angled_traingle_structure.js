@@ -14,15 +14,14 @@ inp.on("line", (data) => {
 inp.on("close", () => {
     //start-here
     //Your code goes here … replace the below line with your code logic 
-    let arr = userInput[1].split(' ')
-    let sum = arr.reduce((a, b) => {
-        if ((+b) < 0) return +a + +b
-        else return a;
-    }, 0)
-    //end-here
-    console.log(sum)
+    let n = +userInput[0], prev = '';
+    for (let i = 0; i < n; i++) {
+        if (i == 0) prev = `${prev}1 `;
+        else prev = `${prev}1 1 `;
+        console.log(prev.trim())
+    }
     //end-here
 });
-// userInput[0] = '2';
-// userInput[1] = '3 0';
-// inp.close();
+//Test case 1
+userInput[0] = '3';
+inp.close();

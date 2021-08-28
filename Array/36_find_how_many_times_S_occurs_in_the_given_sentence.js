@@ -14,15 +14,15 @@ inp.on("line", (data) => {
 inp.on("close", () => {
     //start-here
     //Your code goes here … replace the below line with your code logic 
-    let arr = userInput[1].split(' ')
-    let sum = arr.reduce((a, b) => {
-        if ((+b) < 0) return +a + +b
-        else return a;
-    }, 0)
-    //end-here
-    console.log(sum)
+    let sentence = userInput[0].split(' ');
+    let str = userInput[1], count = 0;
+    sentence.forEach(element => {
+        if (element === str) count = count + 1;
+    })
+    console.log(count > 0 ? count : -1)
     //end-here
 });
-// userInput[0] = '2';
-// userInput[1] = '3 0';
+//Test case 1
+// userInput[0] = 'I enjoy doing codekata';
+// userInput[1] = 'codekata';
 // inp.close();
