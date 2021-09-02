@@ -29,7 +29,7 @@ inp.on("close", () => {
   //end-here
 });
 //Test case 1
-userInput[0] = '5';
-userInput[1] = '1 1 1 1 1';
-userInput[2] = '1 2 3 4 5';
-inp.close();
+// userInput[0] = '5';
+// userInput[1] = '1 1 1 1 1';
+// userInput[2] = '1 2 3 4 5';
+// inp.close();
