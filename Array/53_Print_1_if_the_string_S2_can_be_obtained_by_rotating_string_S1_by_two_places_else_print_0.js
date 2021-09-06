@@ -14,16 +14,17 @@ inp.on("line", (data) => {
 inp.on("close", () => {
     //start-here
     //Your code goes here … replace the below line with your code logic 
-    let arr = userInput[1].split(' ')
-    let sum = arr.reduce((a, b) => {
-        if ((+b) < 0) return +a + +b
-        else return a;
-    }, 0)
-    //end-here
-    console.log(sum)
+    let str = userInput[0], n = +str.length, temp = [];
+    let rotated = userInput[1];
+    for (let i = 0; i < n; i++) {
+        temp.push(str[(i + 2) % n])
+    }
+    if (temp.join('') == rotated) console.log(1)
+    else console.log(0)
+
     //end-here
 });
 //Testcase1
-// userInput[0] = '2';
-// userInput[1] = '3 0';
-// inp.close();
+// userInput[0]='amazon'
+// userInput[1]='azonam'
+// inp.close()

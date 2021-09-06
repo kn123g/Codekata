@@ -14,16 +14,13 @@ inp.on("line", (data) => {
 inp.on("close", () => {
     //start-here
     //Your code goes here … replace the below line with your code logic 
-    let arr = userInput[1].split(' ')
-    let sum = arr.reduce((a, b) => {
-        if ((+b) < 0) return +a + +b
-        else return a;
-    }, 0)
-    //end-here
-    console.log(sum)
+    let n = +userInput[0];
+    let arr = userInput[1].split(' ').map(element => +element)
+    console.log(Math.min(...arr));
+
     //end-here
 });
 //Testcase1
-// userInput[0] = '2';
-// userInput[1] = '3 0';
-// inp.close();
+// userInput[0]='5'
+// userInput[1]='3 4 9 1 6'
+// inp.close()

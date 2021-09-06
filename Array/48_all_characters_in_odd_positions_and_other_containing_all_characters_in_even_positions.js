@@ -14,16 +14,16 @@ inp.on("line", (data) => {
 inp.on("close", () => {
     //start-here
     //Your code goes here … replace the below line with your code logic 
-    let arr = userInput[1].split(' ')
-    let sum = arr.reduce((a, b) => {
-        if ((+b) < 0) return +a + +b
-        else return a;
-    }, 0)
-    //end-here
-    console.log(sum)
+    let str = userInput[0].split('');
+    let odd = '', even = '';
+    str.forEach((str, i) => {
+        if ((i + 1) % 2 == 0) even = even + str;
+        else odd = odd + str;
+    });
+    console.log(`${odd} ${even}`);
+
     //end-here
 });
-//Testcase1
-// userInput[0] = '2';
-// userInput[1] = '3 0';
+//Test case 1
+// userInput[0] = 'XCODE';
 // inp.close();
